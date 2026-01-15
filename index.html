@@ -1,0 +1,2300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description"
+        content="AncientWhiteArmyVet.com will be the host to useful RPG gaming tools for Dungeons & Dragons and Pathfinder.">
+    <meta name="keywords" content="Dungeons & Dragons, Pathfinder, RPG Tools">
+    <title>AncientWhiteArmyVet's RPG Tools</title>
+    <!-- Bootstrap -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Cinzel+Decorative" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/races.js"></script>
+    <script src="js/physicalCharacteristics.js"></script>
+    <script src="js/abilityGenerator.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-custom">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- ============== HEADER =============== -->
+            <header id="home">
+                <!-- Main nav -->
+                <nav class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar navbar-header">
+                            <a class="navbar-brand" href="#home">AncientWhiteArmyVet's RPG Tools</a>
+                            <button type="button" class="navbar-toggle custom-toggle-btn" data-toggle="collapse"
+                                data-target="#main-nav" aria-expanded="false">
+                                <span class="sr-only">
+                                    Toggle navigation
+                                </span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="main-nav">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="plain-link"><a href="#features">Random Physical Stat Generator</a></li>
+                                <li class="plain-link"><a href="#abilities">Random Ability Generator</a></li>
+                                <li class="plain-link"><a href="#pregens">PreGens</a></li>
+                                <!-- <li class="plain-link"><a href="#contact">Contact</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <h1>
+                    <img onload="this.style.opacity='1';" class="big-logo" src="img/Old-Ironsides.png"
+                        alt="Dragonic big logo">
+                </h1>
+            </header>
+        </div>
+        <!-- ============== DIVIDER ============== -->
+        <div class="Divider">
+            <hr class="Divider-rule">
+        </div>
+        <!-- ============== RANDON PHYSICAL STAT GENERATOR SECTION =============== -->
+        <div class="row pattern">
+            <section class="features" id="features">
+                <div class="container">
+                    <div class="row">
+                        <h2>D&D 5E Random Physical Stat Generator</h2>
+                        <p class="section-description">
+                            Select a Dungeons & Dragons 5th edition race and generate an appropriate random height,
+                            weight, and age for your next character...
+                        </p>
+                    </div>
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+                    <div class="row">
+                        <h2>Choose your Race</h2>
+                        <div id="raceSelector">
+                            <select name="race" id="race">
+                                <option value="aarakocra">Aarakocra</option>
+                                <option value="aasimar_fallen">Aasimar, Fallen</option>
+                                <option value="aasimar_protector">Aasimar, Protector</option>
+                                <option value="aasimar_scourge">Aasimar, Scourge</option>
+                                <option value="aasimar_variant">Aasimar, Variant</option>
+                                <option value="bugbear">Bugbear</option>
+                                <option value="centaur">Centaur</option>
+                                <option value="changeling">Changeling</option>
+                                <option value="dragonborn">Dragonborn</option>
+                                <option value="dwarf_gray">Dwarf, Gray (Duergar)</option>
+                                <option value="dwarf_hill">Dwarf, Hill</option>
+                                <option value="dwarf_mark_of_warding">Dwarf, Mark of Warding</option>
+                                <option value="dwarf_mountain">Dwarf, Mountain</option>
+                                <option value="elf_aereni_high">Elf, Aereni High</option>
+                                <option value="elf_aereni_wood">Elf, Aereni Wood</option>
+                                <option value="elf_dark">Elf, Dark (Drow)</option>
+                                <option value="elf_eladrin">Elf, Eladrin</option>
+                                <option value="elf_eladrin_variant">Elf, Eladrin Variant</option>
+                                <option value="elf_high">Elf, High</option>
+                                <option value="elf_mark_of_shadow">Elf, Mark of Shadow</option>
+                                <option value="elf_sea">Elf, Sea</option>
+                                <option value="elf_shadar_kai">Elf, Shadar-kai</option>
+                                <option value="elf_valenar_high">Elf, Valenar High</option>
+                                <option value="elf_valenar_wood">Elf, Valenar Wood</option>
+                                <option value="elf_wood">Elf, Wood</option>
+                                <option value="firbolg">Firbolg</option>
+                                <option value="genasi_air">Genasi, Air</option>
+                                <option value="genasi_earth">Genasi, Earth</option>
+                                <option value="genasi_fire">Genasi, Fire</option>
+                                <option value="genasi_water">Genasi, Water</option>
+                                <option value="gith_githyanki">Gith, Githyanki</option>
+                                <option value="gith_githzerai">Gith, Githzerai</option>
+                                <option value="gnome_deep">Gnome, Deep (Svirfneblin)</option>
+                                <option value="gnome_forest">Gnome, Forest</option>
+                                <option value="gnome_mark_of_scribing">Gnome, Mark of Scribing</option>
+                                <option value="gnome_rock">Gnome, Rock</option>
+                                <option value="goblin">Goblin</option>
+                                <option value="goliath">Goliath</option>
+                                <option value="half_elf">Half-Elf</option>
+                                <option value="half_elf_aquatic">Half-Elf, Aquatic</option>
+                                <option value="half_elf_drow">Half-Elf, Drow</option>
+                                <option value="half_elf_high">Half-Elf, High</option>
+                                <option value="half_elf_mark_of_detection">Half-Elf, Mark of Detection</option>
+                                <option value="half_elf_mark_of_storm">Half-Elf, Mark of Storm</option>
+                                <option value="half_elf_wood">Half-Elf, Wood</option>
+                                <option value="halfling_ghostwise">Halfling, Ghostwise</option>
+                                <option value="halfling_lightfoot">Halfling, Lightfoot</option>
+                                <option value="halfling_mark_of_healing">Halfling, Mark of Healing</option>
+                                <option value="halfling_mark_of_hospitality">Halfling, Mark of Hospitality</option>
+                                <option value="halfling_stoute">Halfling, Stout</option>
+                                <option value="half_orc">Half-Orc</option>
+                                <option value="half_orc_mark_of_finding">Half-Orc, Mark of Finding</option>
+                                <option value="hobgoblin">Hobgoblin</option>
+                                <option value="human">Human</option>
+                                <option value="human_mark_of_handling">Human, Mark of Handling</option>
+                                <option value="human_mark_of_passage">Human, Mark of Passage</option>
+                                <option value="human_mark_of_sentinel">Human, Mark of Sentinel</option>
+                                <option value="human_variant">Human, Variant</option>
+                                <option value="kalashtar">Kalashtar</option>
+                                <option value="kenku">Kenku</option>
+                                <option value="kobold">Kobold</option>
+                                <option value="lizardfolk">Lizardfolk</option>
+                                <option value="locathah">Locathah</option>
+                                <option value="loxodon">Loxodon</option>
+                                <option value="minotaur">Minotaur</option>
+                                <option value="orc">Orc</option>
+                                <option value="orc_of_eberron">Orc of Eberron</option>
+                                <option value="shifter_beasthide">Shifter, Beasthide</option>
+                                <option value="shifter_longtooth">Shifter, Longtooth</option>
+                                <option value="shifter_swiftstride">Shifter, Swiftstride</option>
+                                <option value="shifter_wildhunt">Shifter, Wildhunt</option>
+                                <option value="simic_hybrid_elf">Simic Hybrid Elf</option>
+                                <option value="simic_hybrid_human">Simic Hybrid Human</option>
+                                <option value="simic_hybrid_vedalken">Simic Hybrid Vedalken</option>
+                                <option value="tabaxi">Tabaxi</option>
+                                <option value="tiefling">Tiefling</option>
+                                <option value="tiefling_baalzebul">Tiefling, Baalzebul</option>
+                                <option value="tiefling_dispater">Tiefling, Dispater</option>
+                                <option value="tiefling_feral">Tiefling, Feral</option>
+                                <option value="tiefling_feral_variant">Tiefling, Feral Variant</option>
+                                <option value="tiefling_fierna">Tiefling, Fierna</option>
+                                <option value="tiefling_glasya">Tiefling, Glasya</option>
+                                <option value="tiefling_levistus">Tiefling, Levistus</option>
+                                <option value="tiefling_mammon">Tiefling, Mammon</option>
+                                <option value="tiefling_mephistopheles">Tiefling, Mephistopheles</option>
+                                <option value="tiefling_variant">Tiefling, Variant</option>
+                                <option value="tortle">Tortle</option>
+                                <option value="triton">Triton</option>
+                                <option value="vedalken">Vedalken</option>
+                                <option value="verdan_small">Verdan (small)</option>
+                                <option value="verdan_medium">Verdan (medium)</option>
+                                <option value="warforged">Warforged</option>
+                                <option value="yuan_ti_pureblood">Yuan-ti Pureblood</option>
+                            </select>
+                        </div>
+                        <div id="calcStatsBtn">
+                            <button id="calc_stats" class="btn">Calculate Characteristics</button>
+                        </div>
+
+                        <article class="col-sm-6 col-sm-offset-0 box features-item" data-toggle="modal"
+                            data-target="#shop-modal">
+                            <h3>Racial Stat Ranges</h3>
+                            <div id="characteristicsRanges">
+
+                            </div>
+                        </article>
+                        <article class="col-sm-6 col-sm-offset-0 box features-item" data-toggle="modal"
+                            data-target="#shop-modal">
+                            <h3>Your Stats</h3>
+                            <div id="characteristics">
+
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- ============== DIVIDER ============== -->
+        <div class="Divider">
+            <hr class="Divider-rule">
+        </div>
+        <!-- ============== RANDOM ABILITY GENERATOR ============== -->
+        <div class="row pattern">
+            <section class="features" id="abilities">
+                <div class="container">
+                    <div class="row">
+                        <h2>D&D 5E Random Ability Generator</h2>
+                        <p class="section-description">
+                            If you like the thrill of rolling random ability scores, this is the app for you! Using the
+                            standard 4d6 - Drop the Lowest algirithm, start your character creation journey here...
+                        </p>
+                    </div>
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+                    <div class="row">
+                        <h2>Roll Your Abilities</h2>
+                        <div class="sectionImage">
+                            <img src="img/3d6.png" alt="">
+                        </div>
+                        <div id="calcAbilitiesBtn">
+                            <button id="calc_abilities" class="btn">Calculate Abilities</button>
+                        </div>
+
+                        <article class="col-sm-6 col-sm-offset-0 box features-item" data-toggle="modal"
+                            data-target="#shop-modal">
+                            <h3>Assigned Abilities</h3>
+                            <div id="assignedAbilities">
+
+                            </div>
+                        </article>
+                        <article class="col-sm-6 col-sm-offset-0 box features-item" data-toggle="modal"
+                            data-target="#shop-modal">
+                            <h3>Ordered Abilities</h3>
+                            <div id="orderedAbilities">
+
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============== DIVIDER ============== -->
+        <div class="Divider">
+            <hr class="Divider-rule">
+        </div>
+        <!-- ============== PRE-GENS ============== -->
+        <div class="row pattern">
+            <section class="features" id="pregens">
+                <div class="container">
+                    <div class="row">
+                        <h2>SoCal Games and Comics D&D 5E Pregens</h2>
+                        <p class="section-description">
+                            For those of you who play D&amp;D on Thursday nights with me, here are some of the pregens
+                            I have made for the campaign. We are currently at 8th level.
+                        </p>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN ARTIFICERS -->
+                    <div class="row" id="artificer">
+                        <h3>Artificers</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/BentirriStoneeyes.jpg" alt="Bentirri Stoneeyes" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Bentirri Stoneeyes</h2>
+                                        <h3 class="card_subheading">Artificer: Alchemist</h3>
+                                        <p>Gnome: Deep (Svirfneblin)</p>
+                                        <a href="https://ddb.ac/characters/12266775/UrZSdW" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/Tinker.png" alt="Tinker" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Tinker</h2>
+                                        <h3 class="card_subheading">Artificer: Artillerist</h3>
+                                        <p>Warforged</p>
+                                        <a href="https://ddb.ac/characters/11384338/TZdYeM" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/AerennaMaedona.jpg" alt="Aerenna Maedona" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Aerenna Maedona</h2>
+                                        <h3 class="card_subheading">Artificer: Battle Smith</h3>
+                                        <p>Elf: Valenar High</p>
+                                        <a href="https://ddb.ac/characters/12271279/RBgyYV" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- ============== PRE-GEN - BARBARIANS ============== -->
+                    <div class="row" id="barbarian">
+                        <h3>Barbarians</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/SamashiAlodar.jpg" alt="Samashi Alodar" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Samashi Alodar</h2>
+                                        <h3 class="card_subheading">Barbarian: Path of the Ancestral Guardian</h3>
+                                        <p>Half-Orc</p>
+                                        <a href="https://ddb.ac/characters/11774155/6TD0Ei" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/GibbetIronbrow.jpg" alt="Gibbet Ironbrow" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Gibbet Ironbrow</h2>
+                                        <h3 class="card_subheading">Barbarian: Path of the Battlerager</h3>
+                                        <p>Dwarf: Mountain</p>
+                                        <a href="https://ddb.ac/characters/16862799/7E9r3x" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/TesseraTundra.jpg" alt="Tessera Tundra" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Tessera Tundra</h2>
+                                        <h3 class="card_subheading">Barbarian: Path of the Berserker</h3>
+                                        <p>Genasi: Earth</p>
+                                        <a href="https://ddb.ac/characters/16864774/ADS7Mh" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KindorThunderhooves.jpg" alt="Kindor Thunderhooves" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Kindor Thunderhooves</h2>
+                                        <h3 class="card_subheading">Barbarian: Path of the Storm Herald</h3>
+                                        <p>Minotaur</p>
+                                        <a href="https://ddb.ac/characters/11762684/T8AycW" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/VanSkykeeper.jpg" alt="Van Skykeeper" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Van Skykeeper</h2>
+                                        <h3 class="card_subheading">Barbarian: Path of the Totem Warrior</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/11764720/gD2ThU" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/HarbingerOfDeath.jpg" alt="Harbinger of Death" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Harbinger of Death</h2>
+                                        <h3 class="card_subheading">Barbarian: Path of the Wild Soul</h3>
+                                        <p>Warforged</p>
+                                        <a href="https://ddb.ac/characters/16867009/231Eyb" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/MarlinRedfin.png" alt="Marlin Redfin" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Marlin Redfin</h2>
+                                        <h3 class="card_subheading">Barbarian: Path of the Zealot</h3>
+                                        <p>Locathah</p>
+                                        <a href="https://ddb.ac/characters/11773009/1n8rCi" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- ============== PRE-GEN - BARDS ============== -->
+                    <div class="row" id="bard">
+                        <h3>Bards</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/IstryxYhaya.jpg" alt="Istryx Yhaya" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Istryx Yhaya</h2>
+                                        <h3 class="card_subheading">Bard: College of Eloquence</h3>
+                                        <p>Changeling</p>
+                                        <a href="https://ddb.ac/characters/17393712/NbX8tW" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/AlunaloreKysstine.jpg" alt="Alunalore Kysstine" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Alunalore Kysstine</h2>
+                                        <h3 class="card_subheading">Bard: College of Glamour</h3>
+                                        <p>Half-Elf</p>
+                                        <a href="https://ddb.ac/characters/11765630/DPm0nE" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/UhlsaxleIllistyn.png" alt="Uhlsaxle Illistyn" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Uhlsaxle Illistyn</h2>
+                                        <h3 class="card_subheading">Bard: College of Lore</h3>
+                                        <p>Half-Elf: Drow</p>
+                                        <a href="https://ddb.ac/characters/11764382/kMOOvf" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/SylsiraAshworthy.jpg" alt="Sylsira Ashworthy" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Sylsira Ashworthy</h2>
+                                        <h3 class="card_subheading">Bard: College of Swords</h3>
+                                        <p>Halfling: Lightfoot</p>
+                                        <a href="https://ddb.ac/characters/11774236/9a4SDN" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/VulgusBahlorath.jpg" alt="Vulgus Bahlorath" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Vulgus Bahlorath</h2>
+                                        <h3 class="card_subheading">Bard: College of Valor</h3>
+                                        <p>Triton</p>
+                                        <a href="https://ddb.ac/characters/11764948/up4sCT" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ShilmistaFalaviel.jpg" alt="Shilmista d'Phiarlan" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Shilmista d'Phiarlan</h2>
+                                        <h3 class="card_subheading">Bard: College of Whispers</h3>
+                                        <p>Elf: Mark of Shadow</p>
+                                        <a href="https://ddb.ac/characters/17395242/66PNum" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- ============== PRE-GEN - BLOOD HUNTER ============== -->
+                    <div class="row" id="blood_hunter">
+                        <h3>Blood Hunters</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/FilauriaHatharal.png" alt="Filauria Hatharal" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Filauria Hatharal</h2>
+                                        <h3 class="card_subheading">Blood Hunter: Order of the Ghostslayer</h3>
+                                        <p>Elf: Wood</p>
+                                        <a href="https://ddb.ac/characters/12217419/fS3aSo" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/VulKova.jpg" alt="Vul Kova" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Vul Kova</h2>
+                                        <h3 class="card_subheading">Blood Hunter: Order of the Lycan</h3>
+                                        <p>Half-Orc</p>
+                                        <a href="https://ddb.ac/characters/12254912/1sWkeY" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/PhelanCasimir.jpg" alt="Phelan Casimir" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Phelan Casimir</h2>
+                                        <h3 class="card_subheading">Blood Hunter: Order of the Mutant</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/12261713/JZnWQf" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/BrundranOakenshield.jpg" alt="Brundran Oakenshield" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Brundran Oakenshield</h2>
+                                        <h3 class="card_subheading">Blood Hunter: Order of the Profane Soul</h3>
+                                        <p>Dwarf: Hill</p>
+                                        <a href="https://ddb.ac/characters/12258385/DA9Gl4" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- ============== PRE-GEN - CLERIC ============== -->
+                    <div class="row" id="cleric">
+                        <h3>Clerics</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/FalminarKriwood.jpg" alt="Falminar Kriwood" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Falminar Kriwood</h2>
+                                        <h3 class="card_subheading">Cleric: Arcana Domain</h3>
+                                        <p>Half-Elf: High</p>
+                                        <a href="https://ddb.ac/characters/17553966/7kRlQ8" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/RhazBlackscale.png" alt="Rhaz Blackscale" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Rhaz Blackscale</h2>
+                                        <h3 class="card_subheading">Cleric: Death Domain</h3>
+                                        <p>Lizardfolk</p>
+                                        <a href="https://ddb.ac/characters/17563796/hFRH40" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/NoldreckForgekeeper.jpg" alt="Noldreck Forgekeeper" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Noldreck Forgekeeper</h2>
+                                        <h3 class="card_subheading">Cleric: Forge Domain</h3>
+                                        <p>Dwarf: Mountain</p>
+                                        <a href="https://ddb.ac/characters/11763504/8sRM6G" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/AlbrekShadowstalker.jpg" alt="Albrek Shadowstalker" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Albrek Shadowstalker</h2>
+                                        <h3 class="card_subheading">Cleric: Grave Domain</h3>
+                                        <p>Elf: Shadar-kai</p>
+                                        <a href="https://ddb.ac/characters/17595982/zzo1my" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KathmaraBraendelle.jpg" alt="Kathmara Braendelle" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Kathmara Braendelle</h2>
+                                        <h3 class="card_subheading">Cleric: Knowledge Domain</h3>
+                                        <p>Dwarf: Hill</p>
+                                        <a href="https://ddb.ac/characters/17593865/RPcDOb" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/AaliyahBurningstar.jpg" alt="Aaliyah Burningstar" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Aaliyah Burningstar</h2>
+                                        <h3 class="card_subheading">Cleric: Life Domain</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/11765414/S6dx7F" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ZorkathCinderreaper.jpg" alt="Zorkath Cinderreaper" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Zorkath Cinderreaper</h2>
+                                        <h3 class="card_subheading">Cleric: Light Domain</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/11765276/OU2lNk" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/MorvenMeadowmaster.jpg" alt="Morven Meadowmaster" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Morven Meadowmaster</h2>
+                                        <h3 class="card_subheading">Cleric: Nature Domain</h3>
+                                        <p>Firbolg</p>
+                                        <a href="https://ddb.ac/characters/17596411/RzexZA" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/MayjaIrontusk.png" alt="Mayja Irontusk" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Mayja Irontusk</h2>
+                                        <h3 class="card_subheading">Cleric: Order Domain</h3>
+                                        <p>Loxodon</p>
+                                        <a href="https://ddb.ac/characters/17511681/S4WP4W" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/SurgeRiverwalker.jpg" alt="Surge Riverwalker" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Surge Riverwalker</h2>
+                                        <h3 class="card_subheading">Cleric: Tempest Domain</h3>
+                                        <p>Genasi: Water</p>
+                                        <a href="https://ddb.ac/characters/11773032/8o5A6c" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/Callied’Jorasco.jpg" alt="Callie d’Jorasco" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Callie d’Jorasco</h2>
+                                        <h3 class="card_subheading">Cleric: Trickery Domain</h3>
+                                        <p>Halfling: Mar of Healing</p>
+                                        <a href="https://ddb.ac/characters/17597082/dv00ZH" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KisharaZakhad.jpg" alt="Kishara Zakhad" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Kishara Zakhad</h2>
+                                        <h3 class="card_subheading">Cleric: Twilight Domain</h3>
+                                        <p>Kalashtar</p>
+                                        <a href="https://ddb.ac/characters/17629694/1eLDbN" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/EuridasBlackhoof.jpg" alt="Euridas Blackhoof" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Euridas Blackhoof</h2>
+                                        <h3 class="card_subheading">Cleric: War Domain</h3>
+                                        <p>Centaur</p>
+                                        <a href="https://ddb.ac/characters/17631081/q0YJj0" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN DRUDS -->
+                    <div class="row" id="druid">
+                        <h3>Druids</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/Darmythed'Vadalis.jpg" alt="Darmythe d'Vadalis" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Darmythe d'Vadalis</h2>
+                                        <h3 class="card_subheading">Druid: Circle of Dreams</h3>
+                                        <p>Human: Mark of Handling</p>
+                                        <a href="https://ddb.ac/characters/17685438/8HS3gG" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ArmillariaSporemaiden.jpg"
+                                            alt="Armillaria Sporemaiden" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Armillaria Sporemaiden</h2>
+                                        <h3 class="card_subheading">Druid: Circle of Spores</h3>
+                                        <p>Elf: Valenar Wood</p>
+                                        <a href="https://ddb.ac/characters/18019611/76pT1e" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/IlemaeFrostwarden.jpg" alt="Ilemae Frostwarden" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Ilemae Frostwarden</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Land (Arctic)</h3>
+                                        <p>Half-Elf: High</p>
+                                        <a href="https://ddb.ac/characters/17725791/mNnFiS" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/DeranthilMeredydd.jpg" alt="Deranthil Meredydd" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Deranthil Meredydd</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Land (Coast)</h3>
+                                        <p>Half-Elf: Aquatic</p>
+                                        <a href="https://ddb.ac/characters/17927213/wv0Twb" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/OnyxBramblethorn.jpg" alt="Onyx Bramblethorn" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Onyx Bramblethorn</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Land (Desert)</h3>
+                                        <p>Shifter: Wildhunt</p>
+                                        <a href="https://ddb.ac/characters/17970592/1YA7Ke" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/SolianaGladewalker.jpg" alt="Soliana Gladewalker" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Soliana Gladewalker</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Land (Forest)</h3>
+                                        <p>Elf: Aereni Wood</p>
+                                        <a href="https://ddb.ac/characters/17973131/4nSq2T" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/Madelynd'Vadalis.jpg" alt="Madelyn d'Vadalis" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Madelyn d'Vadalis</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Land (Grassland)</h3>
+                                        <p>Human: Mark of Handling</p>
+                                        <a href="https://ddb.ac/characters/18015564/hMT7aw" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/GangahrSak.jpg" alt="Gangahr Sak" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Gangahr Sak</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Land (Mountain)</h3>
+                                        <p>Gith: Githzerai</p>
+                                        <a href="https://ddb.ac/characters/11762210/eyhkNL" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ChelrenBogmaster.jpg" alt="Chelren Bogmaster" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Chelren Bogmaster</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Land (Swamp)</h3>
+                                        <p>Kalashtar</p>
+                                        <a href="https://ddb.ac/characters/18017949/lfaeLu" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/RaldarusD'Veldrin.jpg" alt="Raldarus D'Veldrin" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Raldarus D'Veldrin</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Land (Underdark)</h3>
+                                        <p>Half-Elf: Drow</p>
+                                        <a href="https://ddb.ac/characters/11763912/Fxic6R" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/CoventinaTaliesin.jpg" alt="Coventina Taliesin" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Coventina Taliesin</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Moon</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/11765857/DxUoA9" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/AneirinArarie.jpg" alt="Aneirin Ararie" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Aneirin Ararie</h2>
+                                        <h3 class="card_subheading">Druid: Circle of the Shepherd</h3>
+                                        <p>Elf: Wood</p>
+                                        <a href="https://ddb.ac/characters/11765681/6100Dj" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/DuirOgham.jpg" alt="Duir Ogham" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Duir Ogham</h2>
+                                        <h3 class="card_subheading">Druid: Circle of Wildfire</h3>
+                                        <p>Warforged</p>
+                                        <a href="https://ddb.ac/characters/18021138/Oc2qvh" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN FIGHTERS -->
+                    <div class="row" id="fighter">
+                        <h3>Fighters</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/HawkeyeHazel.jpg" alt="Hawkeye Hazel" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Hawkeye Hazel</h2>
+                                        <h3 class="card_subheading">Fighter: Arcane Archer</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/18041624/5TpcGK" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/MelaneHighwarriorGathakavi.jpg"
+                                            alt="Melane Highwarrior Gathakavi" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Melane Highwarrior Gathakavi</h2>
+                                        <h3 class="card_subheading">Fighter: Battle Master</h3>
+                                        <p>Goliath</p>
+                                        <a href="https://ddb.ac/characters/11773817/zfJNnp" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/Malka'vecYellowfang.jpg" alt="Malka'vec Yellowfang" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Malka'vec Yellowfang</h2>
+                                        <h3 class="card_subheading">Fighter: Brute</h3>
+                                        <p>Bugbear</p>
+                                        <a href="https://ddb.ac/characters/18094258/HlIJEy" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/CaldwellArmstrong.png" alt="Caldwell Armstrong" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Caldwell Armstrong</h2>
+                                        <h3 class="card_subheading">Fighter: Cavalier</h3>
+                                        <p>Human: Mark of Sentinel</p>
+                                        <a href="https://ddb.ac/characters/18096839/1BudkK" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/HaugrimWabbletrot.jpg" alt="Haugrim Wabbletrot" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Haugrim Wabbletrot</h2>
+                                        <h3 class="card_subheading">Fighter: Champion</h3>
+                                        <p>Dwarf: Mountain</p>
+                                        <a href="https://ddb.ac/characters/11762364/nECnIc" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/YessuneRaszmina.jpg" alt="Yessune Raszmina" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Yessune Raszmina</h2>
+                                        <h3 class="card_subheading">Fighter: Eldritch Knight</h3>
+                                        <p>Gith: Githyanki</p>
+                                        <a href="https://ddb.ac/characters/18260710/E2lBEj" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/JorgMudfoot.jpg" alt="Jorg Mudfoot" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Jorg Mudfoot</h2>
+                                        <h3 class="card_subheading">Fighter: Gunslinger</h3>
+                                        <p>Goblin</p>
+                                        <a href="https://ddb.ac/characters/18262292/6MQEo0" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/Gulrad'Tharashk.jpg" alt="Gulra d'Tharashk" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Gulra d'Tharashk</h2>
+                                        <h3 class="card_subheading">Fighter: Psychic Warrior</h3>
+                                        <p>Half-Orc: Mark of Finding</p>
+                                        <a href="https://ddb.ac/characters/19638137/8fO2CP" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/CordeliaSummershield.jpg"
+                                            alt="Cordelia Summershield" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Cordelia Summershield</h2>
+                                        <h3 class="card_subheading">Fighter: Purple Dragon Knight</h3>
+                                        <p>Half-Elf: High</p>
+                                        <a href="https://ddb.ac/characters/18263888/m5ho3G" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ReliahRunecutterKalukathai.jpg"
+                                            alt="Reliah Runecutter Kalukathai" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Reliah Runecutter Kalukathai</h2>
+                                        <h3 class="card_subheading">Fighter: Rune Knight</h3>
+                                        <p>Goliath</p>
+                                        <a href="https://ddb.ac/characters/18264739/6DYZ0f" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/XarmirKosira.jpg" alt="Xarmir Kosira" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Xarmir Kosira</h2>
+                                        <h3 class="card_subheading">Fighter: Samurai</h3>
+                                        <p>Tiefling: Feral</p>
+                                        <a href="https://ddb.ac/characters/11765079/KedVFE" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN MONKS -->
+                    <div class="row" id="monk">
+                        <h3>Monks</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/SyldreyFenyra.jpg" alt="Syldrey Fenyra" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Syldrey Fenyra</h2>
+                                        <h3 class="card_subheading">Monk: Way of Shadow</h3>
+                                        <p>Halfling: Ghostwise</p>
+                                        <a href="https://ddb.ac/characters/11774213/zNm83S" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/QuietThunder.jpg" alt="Quiet Thunder" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Quiet Thunder</h2>
+                                        <h3 class="card_subheading">Monk: Way of the Astral Self</h3>
+                                        <p>Tabaxi</p>
+                                        <a href="https://ddb.ac/characters/18266603/1kL4Uf" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/GenTildu.jpg" alt="Gen Tildu" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Gen Tildu</h2>
+                                        <h3 class="card_subheading">Monk: Way of the Drunken Master</h3>
+                                        <p>Tortle</p>
+                                        <a href="https://ddb.ac/characters/11762156/k6F8SS" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ZeploShortsnout.jpg" alt="Zeplo Shortsnout" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Zeplo Shortsnout</h2>
+                                        <h3 class="card_subheading">Monk: Way of the Four Elements</h3>
+                                        <p>Kobold</p>
+                                        <a href="https://ddb.ac/characters/18298492/bfxq8c" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/IronFist.jpg" alt="Iron Fist" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Iron Fist</h2>
+                                        <h3 class="card_subheading">Monk: Way of the Kensei</h3>
+                                        <p>Warforged</p>
+                                        <a href="https://ddb.ac/characters/18301306/2PJ2fx" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/DaenestraEarendil.jpg" alt="Daenestra Earendil" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Daenestra Earendil</h2>
+                                        <h3 class="card_subheading">Monk: Way of the Long Death</h3>
+                                        <p>Elf: Wood</p>
+                                        <a href="https://ddb.ac/characters/11766100/XfVDI2" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/SerrekKlekkarr.jpg" alt="Serrek Klekkarr" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Serrek Klekkarr</h2>
+                                        <h3 class="card_subheading">Monk: Way of the Open Hand</h3>
+                                        <p>Aarakocra</p>
+                                        <a href="https://ddb.ac/characters/11764333/1y5uyC" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KiradonDuskbreaker.jpg" alt="Kiradon Duskbreaker" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Kiradon Duskbreaker</h2>
+                                        <h3 class="card_subheading">Monk: Way of the Sun Soul</h3>
+                                        <p>Human: Mark of Passage</p>
+                                        <a href="https://ddb.ac/characters/18303522/c5Fv5b" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN PALADINS -->
+                    <div class="row" id="paladin">
+                        <h3>Paladins</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/RonnaLioncrest.jpg" alt="Ronna Lioncrest" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Ronna Lioncrest</h2>
+                                        <h3 class="card_subheading">Paladin: Oath of Conquest</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/11774068/dSwyfp" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/JarvullUrlingscar.jpg" alt="Jarvull Urlingscar" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Jarvull Urlingscar</h2>
+                                        <h3 class="card_subheading">Paladin: Oath of Devotion</h3>
+                                        <p>Dragonborn</p>
+                                        <a href="https://ddb.ac/characters/11762457/ilbPLE" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/OrtakTheGiantslayer.jpg"
+                                            alt="Ortak the Giant Slayer" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Ortak the Giant Slayer</h2>
+                                        <h3 class="card_subheading">Paladin: Oath of Heroism</h3>
+                                        <p>Orc</p>
+                                        <a href="https://ddb.ac/characters/18305280/IMW4DD" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/DavinaShadowborne.png" alt="Davina Shadowborne" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Davina Shadowborne</h2>
+                                        <h3 class="card_subheading">Paladin: Oath of Redemption</h3>
+                                        <p>Aasimar: Fallen</p>
+                                        <a href="https://ddb.ac/characters/18306953/N4MN0k" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/SeraphinaGreenfeld.jpg" alt="Seraphina Greenfeld" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Seraphina Greenfeld</h2>
+                                        <h3 class="card_subheading">Paladin: Oath of the Ancients</h3>
+                                        <p>Half-Elf: High</p>
+                                        <a href="https://ddb.ac/characters/11774175/a48sG4" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/DariusWyrmhunter.png" alt="Darius Wyrmhunter" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Darius Wyrmhunter</h2>
+                                        <h3 class="card_subheading">Paladin: Oath of the Crown</h3>
+                                        <p>Human: Mark of Sentinel</p>
+                                        <a href="https://ddb.ac/characters/18308911/35yCRg" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KruegMakotar.jpg" alt="Krueg Makotar" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Krueg Makotar</h2>
+                                        <h3 class="card_subheading">Paladin: Oath of Vengeance</h3>
+                                        <p>Half-Orc</p>
+                                        <a href="https://ddb.ac/characters/11762812/W64fML" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/SeiriniseShehata.jpg" alt="Seirinise Shehata" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Seirinise Shehata</h2>
+                                        <h3 class="card_subheading">Paladin: Oathbreaker</h3>
+                                        <p>Tiefling: Glasya</p>
+                                        <a href="https://ddb.ac/characters/18310328/Z3bRa8" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN RANGERS -->
+                    <div class="row" id="ranger">
+                        <h3>Rangers</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/BrockBriarthorne.jpg" alt="Brock Briarthorne" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Brock Briarthorne</h2>
+                                        <h3 class="card_subheading">Ranger: Beast Master</h3>
+                                        <p>Shifter: Longtooth</p>
+                                        <a href="https://ddb.ac/characters/18318779/IQUNHc" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/BonmaraSteelshadow.png" alt="Bonmara Steelshadow" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Bonmara Steelshadow</h2>
+                                        <h3 class="card_subheading">Ranger: Gloom Stalker</h3>
+                                        <p>Dwarf: Gray (Duergar)</p>
+                                        <a href="https://ddb.ac/characters/11765795/2gJYeg" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/NatanDo'Riz.jpg" alt="Natan Do'Riz" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Natan Do'Riz</h2>
+                                        <h3 class="card_subheading">Ranger: Horizon Walker</h3>
+                                        <p>Elf: Shadar-kai</p>
+                                        <a href="https://ddb.ac/characters/11763225/jjAoJr" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KayleighForester.jpg" alt="Kayleigh Forester" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Kayleigh Forester</h2>
+                                        <h3 class="card_subheading">Ranger: Hunter (Colossus Slayer)</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/18537824/EEegqo" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/CalanonThorontur.jpg" alt="Calanon Thorontur" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Calanon Thorontur</h2>
+                                        <h3 class="card_subheading">Ranger: Hunter (Giant Killer)</h3>
+                                        <p>Elf: Wood</p>
+                                        <a href="https://ddb.ac/characters/11741666/Hprqmk" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KillianFoehammer.png" alt="Killian Foehammer" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Killian Foehammer</h2>
+                                        <h3 class="card_subheading">Ranger: Hunter (Horde Breaker)</h3>
+                                        <p>Dwarf: Mountain</p>
+                                        <a href="https://ddb.ac/characters/18562343/9LWvBo" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/EilyraMorcan.jpg" alt="Eilyra Morcan" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Eilyra Morcan</h2>
+                                        <h3 class="card_subheading">Ranger: Monster Slayer</h3>
+                                        <p>Simic Hybrid</p>
+                                        <a href="https://ddb.ac/characters/11772735/hw70Fj" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/GwendolineBikker .jpg" alt="Gwendoline Bikker" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Gwendoline Bikker</h2>
+                                        <h3 class="card_subheading">Ranger: Swarmkeeper</h3>
+                                        <p>Human: Mark of Passage</p>
+                                        <a href="https://ddb.ac/characters/18526107/c6iFep" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN ROGUES -->
+                    <div class="row" id="rogue">
+                        <h3>Rogues</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/GrennoaGaltra.jpg" alt="Grennoa Galtra" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Grennoa Galtra</h2>
+                                        <h3 class="card_subheading">Rogue: Arcane Trickster</h3>
+                                        <p>Gnome: Forest</p>
+                                        <a href="https://ddb.ac/characters/11772956/OlX93t" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/Ripper.jpg" alt="Ripper" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Ripper</h2>
+                                        <h3 class="card_subheading">Rogue: Assassin</h3>
+                                        <p>Kenku</p>
+                                        <a href="https://ddb.ac/characters/11774034/A4GXYO" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KicassKamphundr.png" alt="Kicass Kamphundr" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Kicass Kamphundr</h2>
+                                        <h3 class="card_subheading">Rogue: Inquisitive</h3>
+                                        <p>Aarakocra</p>
+                                        <a href="https://ddb.ac/characters/18578452/O4VOjl" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/EugeneCerveau.jpg" alt="Eugene Cerveau" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Eugene Cerveau</h2>
+                                        <h3 class="card_subheading">Rogue: Mastermind</h3>
+                                        <p>Tabaxi</p>
+                                        <a href="https://ddb.ac/characters/18579192/w5CYTu" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/FreitagHinterhalt.jpg" alt="Freitag Hinterhalt" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Freitag Hinterhalt</h2>
+                                        <h3 class="card_subheading">Rogue: Scout</h3>
+                                        <p>Human: Mark of Passage</p>
+                                        <a href="https://ddb.ac/characters/18579904/UN5vm3" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/MertixSoulreaver.jpg" alt="Mertix Soulreaver" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Mertix Soulreaver</h2>
+                                        <h3 class="card_subheading">Rogue: Soulknife</h3>
+                                        <p>Gnome: Forest</p>
+                                        <a href="https://ddb.ac/characters/20332396/MvjvP4" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/BeltonZalwrick.png" alt="Belton Zalwrick" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Belton Zalwrick</h2>
+                                        <h3 class="card_subheading">Rogue: Swashbuckler</h3>
+                                        <p>Halfling, Lightfoot</p>
+                                        <a href="https://ddb.ac/characters/11741618/eXunvy" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/HuthysSchatten.jpg" alt="Huthys Schatten" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Huthys Schatten</h2>
+                                        <h3 class="card_subheading">Rogue: The Revived</h3>
+                                        <p>Elf, Shadar-kai</p>
+                                        <a href="https://ddb.ac/characters/18580661/WZ8Dno" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ElendarA'Daragon.jpg" alt="Elendar A'Daragon" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Elendar A'Daragon</h2>
+                                        <h3 class="card_subheading">Rogue: Thief</h3>
+                                        <p>Elf, Dark (Drow)</p>
+                                        <a href="https://ddb.ac/characters/11741846/kdBszy" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN SORCERERS -->
+                    <div class="row" id="sorcerer">
+                        <h3>Sorcerers</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/OtThunderbite.jpg" alt="Ot Thunderbite" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Ot Thunderbite</h2>
+                                        <h3 class="card_subheading">Sorcerer: Aberrant Mind</h3>
+                                        <p>Verdan</p>
+                                        <a href="https://ddb.ac/characters/18655409/oKP4HI" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/LestranaArnalore.jpg" alt="Lestrana Arnalore" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Lestrana Arnalore</h2>
+                                        <h3 class="card_subheading">Sorcerer: Divine Soul</h3>
+                                        <p>Half-Elf</p>
+                                        <a href="https://ddb.ac/characters/11773079/HbcWMZ" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ValspiraNephrias.jpg" alt="Valspira Nephrias" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Valspira Nephrias</h2>
+                                        <h3 class="card_subheading">Sorcerer: Draconic Bloodline</h3>
+                                        <p>Tiefling: Variant</p>
+                                        <a href="https://ddb.ac/characters/11774287/xcGtz8" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/YeatsKrystalgazer.png" alt="Yeats Krystalgazer" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Yeats Krystalgazer</h2>
+                                        <h3 class="card_subheading">Sorcerer: Giant Soul</h3>
+                                        <p>Changeling</p>
+                                        <a href="https://ddb.ac/characters/18918540/hSAiZa" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/NiztliullHikliss.jpg" alt="Niztliull Hikliss" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Niztliull Hikliss</h2>
+                                        <h3 class="card_subheading">Sorcerer: Shadow Magic</h3>
+                                        <p>Yuan-ti Pureblood</p>
+                                        <a href="https://ddb.ac/characters/11763368/PI7dDe" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/LurramUklar.jpg" alt="Lurram Uklar" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Lurram Uklar</h2>
+                                        <h3 class="card_subheading">Sorcerer: Storm Sorcery</h3>
+                                        <p>Aasimar: Scourge</p>
+                                        <a href="https://ddb.ac/characters/11762874/H3fb5f" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KenariVixen.jpg" alt="Kenari Vixen" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Kenari Vixen</h2>
+                                        <h3 class="card_subheading">Sorcerer: Wild Magic</h3>
+                                        <p>Simic Hybrid</p>
+                                        <a href="https://ddb.ac/characters/18921702/3k4gMd" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN WARLOCKS -->
+                    <div class="row" id="warlock">
+                        <h3>Warlocks</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/MaregwynnSylborin.jpg" alt="Maregwynn Sylborin" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Maregwynn Sylborin</h2>
+                                        <h3 class="card_subheading">Warlock: The Archfey</h3>
+                                        <p>Half-Elf: Wood</p>
+                                        <a href="https://ddb.ac/characters/11773761/LKZBKk" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/MarquisWilkens.jpg" alt="Marquis Wilkens" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Marquis Wilkens</h2>
+                                        <h3 class="card_subheading">Warlock: The Celestial</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/11763044/xr4reQ" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/CygridiamHerladil.jpg" alt="Cygridiam Herladil" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Cygridiam Herladil</h2>
+                                        <h3 class="card_subheading">Warlock: The Fiend</h3>
+                                        <p>Aasimar: Fallen</p>
+                                        <a href="https://ddb.ac/characters/11741766/l58mFX" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ItzehaAskathu.jpg" alt="Itzeha Askathu" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Itzeha Askathu</h2>
+                                        <h3 class="card_subheading">Warlock: The Great Old One</h3>
+                                        <p>Yuan-ti Pureblood</p>
+                                        <a href="https://ddb.ac/characters/19000200/iDU2TI" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/AdrieKritrana.jpg" alt="Adrie Kritrana" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Adrie Kritrana</h2>
+                                        <h3 class="card_subheading">Warlock: The Hexblade</h3>
+                                        <p>Half-Elf: Wood</p>
+                                        <a href="https://ddb.ac/characters/11773709/WALhSE" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/AvashtanaPerlantasil.jpg" alt="Avashtana Perlantasil" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Avashtana Perlantasil</h2>
+                                        <h3 class="card_subheading">Warlock: The Lurker in the Deep</h3>
+                                        <p>Half-Elf: Aquatic</p>
+                                        <a href="https://ddb.ac/characters/19033739/vkkEUh" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/MorrakirValron.jpg" alt="Morrakir Valron" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Morrakir Valron</h2>
+                                        <h3 class="card_subheading">Warlock: The Undying</h3>
+                                        <p>Tiefling: Levistus</p>
+                                        <a href="https://ddb.ac/characters/19078838/zfWnGJ" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row items-container bottom-wrapper">
+                        <p>&nbsp;<br>&nbsp;</p>
+                    </div>
+
+                    <!-- PRE-GEN WIZARDS -->
+                    <div class="row" id="wizard">
+                        <h3>Wizards</h3>
+                        <ul class="cards">
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/EldianeKelyra.jpg" alt="Eldiane Kelyra" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Eldiane Kelyra</h2>
+                                        <h3 class="card_subheading">Wizard: Bladesinging</h3>
+                                        <p>Half-Elf: High</p>
+                                        <a href="https://ddb.ac/characters/11772799/4cjYSW" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/Nirbertd'Sivis.png" alt="Nirbert d'Sivis" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Nirbert d'Sivis</h2>
+                                        <h3 class="card_subheading">Wizard: Onomancy</h3>
+                                        <p>Gnome: Mark of Scribing</p>
+                                        <a href="https://ddb.ac/characters/19128112/ayPk3U" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KlerrayilBaan.jpg" alt="Klerrayil Baan" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Klerrayil Baan</h2>
+                                        <h3 class="card_subheading">Wizard: Psionics</h3>
+                                        <p>Vedalken</p>
+                                        <a href="https://ddb.ac/characters/20334315/KtVQvr" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/MymilaOdali.jpg" alt="Mymila Odali" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Mymila Odali</h2>
+                                        <h3 class="card_subheading">Wizard: School of Abjuration</h3>
+                                        <p>Gnome: Forest</p>
+                                        <a href="https://ddb.ac/characters/11773890/BsONcQ" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ElariaElkhazel.jpg" alt="Elaria Elkhazel" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Elaria Elkhazel</h2>
+                                        <h3 class="card_subheading">Wizard: School of Conjuration</h3>
+                                        <p>Elf: Aereni High</p>
+                                        <a href="https://ddb.ac/characters/19244107/JnG5PP" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/OkalisAllerin.jpg" alt="Okalis Allerin" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Okalis Allerin</h2>
+                                        <h3 class="card_subheading">Wizard: School of Divination</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/11763655/yEnUmt" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ReginaldLockhart.png" alt="Reginald Lockhart" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Reginald Lockhart</h2>
+                                        <h3 class="card_subheading">Wizard: School of Enchantment</h3>
+                                        <p>Human: Variant</p>
+                                        <a href="https://ddb.ac/characters/11764047/gtCODZ" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/EmberHeartfire.jpg" alt="Ember Heartfire" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Ember Heartfire</h2>
+                                        <h3 class="card_subheading">Wizard: School of Evocation</h3>
+                                        <p>Genasi: Fire</p>
+                                        <a href="https://ddb.ac/characters/19280756/h2Sk6c" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/EreuvirCaebynn.jpg" alt="Ereuvir Caebynn" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Ereuvir Caebynn</h2>
+                                        <h3 class="card_subheading">Wizard: School of Illusion</h3>
+                                        <p>Elf: Eladrin Variant</p>
+                                        <a href="https://ddb.ac/characters/19288769/vifssE" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/ArixiGoldstone.jpg" alt="Arixi Goldstone" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Arixi Goldstone</h2>
+                                        <h3 class="card_subheading">Wizard: School of Invention</h3>
+                                        <p>Gnome: Rock</p>
+                                        <a href="https://ddb.ac/characters/19291136/odCGAi" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/GrezhulFleshrender.jpg" alt="Grezhul Fleshrender" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Grezhul Fleshrender</h2>
+                                        <h3 class="card_subheading">Wizard: School of Necromancy</h3>
+                                        <p>Human</p>
+                                        <a href="https://ddb.ac/characters/19337348/TG8Kvc" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/SorraGralneh.jpg" alt="Sorra Gralneh" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Sorra Gralneh</h2>
+                                        <h3 class="card_subheading">Wizard: School of Transmutation</h3>
+                                        <p>Vedalken</p>
+                                        <a href="https://ddb.ac/characters/19344878/Eou7LB" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cards_item">
+                                <div class="card">
+                                    <div class="card_image">
+                                        <img src="img/characrers/KothukTalbo.jpg" alt="Kothuk Talbo" />
+                                    </div>
+
+                                    <div class="card_content">
+                                        <h2 class="card_heading">Kothuk Talbo</h2>
+                                        <h3 class="card_subheading">Wizard: War Magic</h3>
+                                        <p>Hobgoblin</p>
+                                        <a href="https://ddb.ac/characters/19346338/POxh5X" class="card_button"
+                                            target="_blank">On DND Beyond</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ============== DIVIDER ============== -->
+        <div class="Divider">
+            <hr class="Divider-rule">
+        </div>
+
+        <!-- ============== FOOTER =============== -->
+        <div class="row pattern-dark">
+            <footer class="container footer">
+                <div class="row">
+                    <p class="copyright">Copyright &copy; 2019 by AncientWhiteArmyVet</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- ============== SCRIPTS =============== -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+</body>
+
+</html>

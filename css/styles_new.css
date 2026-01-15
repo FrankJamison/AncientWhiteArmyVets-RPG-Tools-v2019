@@ -1,0 +1,119 @@
+html, body {
+    color: #383838;
+    font-size: 18px;
+    font-family: "Cinzel Decorative", "Palatino Light", Times, Times New Roman, Georgia, serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility; }
+    @media (min-width: 768px) {
+      html, body {
+        font-size: 20px !important;
+        padding-right: 0px !important; 
+    } 
+}
+
+.navbar-custom {
+  background: linear-gradient(rgba(34, 34, 34, 0.95), rgba(34, 34, 34, 0.75));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 3; 
+}
+
+.navbar .container {
+  font-size: 14px !important; 
+}
+
+.nav-logo {
+  width: 40px;
+  height: auto; 
+}
+
+
+a.navbar-logo {
+  background-image: url(../img/logo-compact.png);
+  width: 50px;
+  height: 40px;
+  background-size: 50px auto;
+  padding: 0;
+  margin-top: 2px; 
+}
+
+a.navbar-logo:hover {
+  background-position: 0px -50px; 
+}
+
+.custom-toggle-btn {
+  background-color: rgba(255, 255, 255, 0) !important;
+  border: none;
+  right: 5px;
+  top: -1px;
+  position: absolute; 
+}
+
+.custom-toggle-btn .icon-bar {
+  margin: -5px -11px 6px 0px;
+  height: 3px;
+  width: 30px;
+  background-color: #ecd19a !important; 
+}
+
+#main-nav ul {
+  margin-top: 0;
+  margin-bottom: 0; 
+}
+
+.plain-link {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  margin: 0 auto;
+  padding: 5px 10px 5px 10px; 
+}
+@media (min-width: 768px) {
+  .plain-link {
+    padding: 0px 10px 0px 10px; 
+  } 
+}
+
+@media (max-width: 768px) {
+  .plain-link {
+    border-bottom: 1px solid #383838; 
+  } 
+}
+
+.plain-link a {
+  color: #c4ae78 !important;
+  font-size: 120%;
+  transition: all 0.33s; 
+}
+
+@media (min-width: 768px) {
+  .plain-link a {
+    font-size: 100%; 
+  } 
+}
+
+@media (min-width: 992px) {
+  .plain-link a {
+    font-size: 100%; 
+  } 
+}
+
+.plain-link:hover {
+  text-shadow: 0 0 15px #99774c, 0px -5px 20px #a17e51, 0 5px 20px #96744a; 
+}
+
+.plain-link:hover a {
+  color: #ffffff !important; 
+}
+
+.plain-link.active {
+  text-shadow: 0 0 15px #99774c, 0px -5px 20px #a17e51, 0 5px 20px #96744a; 
+}
+
+.plain-link.active a {
+  background-color: transparent !important;
+  color: #ffffff !important; 
+}
+
+.collapsing .plain-link a, .in .plain-link a {
+  text-align: center; 
+}
+
