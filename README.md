@@ -1,17 +1,21 @@
-﻿# AncientWhiteArmyVet’s RPG Tools (Static Web App)
+﻿# AncientWhiteArmyVet's RPG Tools v2019
 
-A lightweight, single-page web app that provides tabletop RPG helper tools for Dungeons & Dragons 5E character creation.
+A lightweight, single-page static web app that provides tabletop RPG helper tools for Dungeons & Dragons 5E character creation.
+
+Live preview:
+
+- https://ancientwhitearmyvet2019.fcjamison.com/
 
 This repository is intentionally “low ceremony” (static HTML/CSS/JS) to demonstrate fundamentals: DOM-driven UI, data modeling, algorithmic generation (dice mechanics), and a themed responsive layout.
 
-## Why this project (for employers & recruiters)
+## Project goals
 
-This project highlights practical front-end skills in a small, reviewable codebase:
+This project stays intentionally “low ceremony” (plain HTML/CSS/JS) and focuses on understandable, DOM-driven logic.
 
-- **Product thinking:** turns common character-creation friction into fast, repeatable tools.
-- **Data + logic separation:** race data is stored as plain objects; generator logic consumes those objects.
-- **Deterministic UI wiring:** single-page navigation with clearly scoped event handlers.
-- **Theming & layout:** Bootstrap base + custom fantasy styling, custom typography, and a sectioned landing-page flow.
+- Small, reviewable, no-build setup
+- Data + logic separation (race data objects consumed by generators)
+- Deterministic UI wiring (jQuery + DOM updates)
+- Themed responsive layout (Bootstrap + custom CSS)
 
 ## Features
 
@@ -57,26 +61,26 @@ Note: some outbound sheet links are historical and may no longer resolve.
 - **jQuery** (event handling + DOM updates)
 - **Google Fonts** (Cinzel / Cinzel Decorative)
 
-No Node toolchain is required to run the site.
+No build toolchain is required to run the site.
 
-## Codebase tour (for developers)
+## Repository layout (developer tour)
 
-Entry point:
+Entry point
 
-- `index.html` — page structure, tool sections, and script/style includes
+- `index.html` — page structure, tool sections, script/style includes
 
-Generators:
+Data + generators
 
 - `js/races.js` — the `character` model plus race data objects
 - `js/physicalCharacteristics.js` — physical stat generation + rendering
 - `js/abilityGenerator.js` — ability rolling + rendering
 
-Styling:
+Styling
 
-- `css/styles.css` — main stylesheet (imports Bootstrap vendor CSS)
-- `css/scss/styles.sass` — styling source (optional/legacy; not required to run)
+- `css/styles.css` — main stylesheet (includes vendor Bootstrap CSS)
+- `css/scss/styles.sass` — Sass source (optional; not required to run)
 
-Assets:
+Assets
 
 - `img/` — branding, textures, UI imagery
 
@@ -110,7 +114,11 @@ The UI intentionally shows both:
 
 ## Running locally
 
-### Option A: open directly
+Primary local URL:
+
+- http://ancientwhitearmyvetsrpgtoolsv2019.localhost/
+
+### Option A: open directly (simplest)
 
 Open `index.html` in a modern browser.
 
@@ -118,12 +126,26 @@ Open `index.html` in a modern browser.
 
 Use any static web server.
 
-Example (Python 3):
+If you already have a local web server (IIS/Apache/nginx/etc) mapped to this folder and bound to `ancientwhitearmyvetsrpgtoolsv2019.localhost`, you can simply browse to:
 
-1. From the project root: `python -m http.server 8080`
-2. Visit: `http://localhost:8080/`
+- http://ancientwhitearmyvetsrpgtoolsv2019.localhost/
 
-## Extending the project
+Example (Python 3)
+
+1. From the project root, start a static server on port 80:
+   - `python -m http.server 80 --bind 127.0.0.1`
+2. Visit:
+   - http://ancientwhitearmyvetsrpgtoolsv2019.localhost/
+
+Note: on Windows, port 80 may require elevated privileges. If you don’t want to run on port 80, use a high port instead (e.g. 8080) and browse to `http://127.0.0.1:8080/`.
+
+### VS Code task
+
+This repo includes a VS Code task in `.vscode/tasks.json`:
+
+- **Open in Browser** — opens http://ancientwhitearmyvetsrpgtoolsv2019.localhost/ in Chrome.
+
+## Common development tasks
 
 ### Add a new race to the Physical Stat Generator
 
@@ -143,7 +165,7 @@ Common variants:
 - Add reroll rules (e.g., reroll 1s)
 - Allow assignment by user choice (instead of fixed STR→CHA order)
 
-## Quality notes / known improvements
+## Notes / known improvements
 
 If I were continuing this project today, I’d prioritize:
 
@@ -155,4 +177,3 @@ If I were continuing this project today, I’d prioritize:
 ## Disclaimer
 
 This project is fan-made and not affiliated with Wizards of the Coast, D&D Beyond, or any other rights holders. Dungeons & Dragons and related marks are trademarks of their respective owners.
-
